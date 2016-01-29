@@ -15,11 +15,13 @@ class battery
     double getCurrent();
     double getVoltage();
     double getmWhConsumed();
+    double getAhConsumed();   
     
   private:
     double _current;
     double _voltage;
     double _mWhConsumed;
+    double _AhConsumed;
     long _lastUpdated;
 };
 

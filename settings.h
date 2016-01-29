@@ -1,15 +1,27 @@
 #ifndef settings_h
 #define settings_h
 
-#define CURRENTPIN A1
-#define VOLTAGEPIN A0
+#define ENABLEMETERPIN 13
 
-#define ENABLEMETERPIN 12
+#define SHUNTRESISTANCE 0.0015
 
-#define OVERSAMPLING 100
-#define OVERSAMPLING_SETTINGS 10000
+#define CURRENTTHRESHOLD 0.02
+#define TIMETOSLEEP 60000
 
-#define CURRENTTHRESHOLD 0.1
-#define TIMETOSLEEP 5000
+
+// LCD Settings
+
+#define RS 8
+#define RW 7
+#define VDD 9
+#define ENABLE 6
+#define D4 5
+#define D5 4
+#define D6 3
+#define D7 2
+
+#define VDDCONTRAST A0
+#define VCCCONTRAST A2
+
 
 #endif

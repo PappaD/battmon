@@ -1,5 +1,10 @@
+
 #ifndef sensor_h
 #define sensor_h
+
+#include <Wire.h>
+#include "Adafruit_INA219.h"
+
 
 
 class sensor
@@ -13,24 +18,14 @@ class sensor
     double getCurrent();
     double getVoltage();
 
-    void setCurrent(double current);
-    void setVoltage(double voltage);
-    void setZeroCurrent();
-    void setZeroVoltage();
-
     void initialize();
     
   private:
-    double _zeroCurrent;
-    double _zeroVoltage;
-    double _voltageScaler;
-    double _currentScaler;
-    
-    void EEPROM_writeDouble(int ee, double value);
-    double EEPROM_readDouble(int ee);
-
     double _current;
     double _voltage;
+    double _shuntvoltage;
+    
+    Adafruit_INA219 _ina219;
 };
 
 

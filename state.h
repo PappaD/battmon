@@ -14,7 +14,7 @@ class state
     };
 
     enum waitEnum {
-      WAIT_15Ms,
+      WAIT_15MS,
       WAIT_30MS, 
       WAIT_60MS,
       WAIT_120MS,
@@ -30,11 +30,13 @@ class state
     void updateState(sensor *sen);
     void wait(waitEnum w);
     void wait();
+    long myMillis();
     
     stateEnum getState();
     
   private:
     stateEnum _state;
     long _lastCurrentConsumtion;
+    long _millisOffset;
 };
 #endif
